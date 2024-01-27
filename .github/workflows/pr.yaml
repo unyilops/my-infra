@@ -1,8 +1,8 @@
 name: Pulumi
 on:
-  #pull_request:
-  #  type: [opened]
-  #  branches: [main]
+  pull_request:
+    type: [opened]
+    branches: [main]
   push:
 
 jobs:
@@ -16,6 +16,7 @@ jobs:
           command: preview
           stack-name: organization/try-pulumi-civo/dev
           cloud-url: "s3://pulumi-state-91536e4?endpoint=objectstore.lon1.civo.com&disableSSL=true&s3ForcePathStyle=true"
+          comment-on-pr: true
         env:
           PULUMI_CONFIG_PASSPHRASE: ${{ secrets.PULUMI_CONFIG_PASSPHRASE }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
