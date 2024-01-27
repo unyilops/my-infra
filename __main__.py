@@ -13,4 +13,4 @@ pulumi.export('obj_store_id', obj_store.id)
 pulumi.export('obj_store_url', obj_store.bucket_url)
 pulumi.export('obj_store_name', obj_store.name)
 
-#web_server = civo.Instance("web-server", region="LON1", disk_image="ubuntu-jammy")
+web_server = civo.Instance("web-server", region="LON1", disk_image="ubuntu-jammy")
