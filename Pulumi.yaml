@@ -1,0 +1,6 @@
+name: try-pulumi-civo
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: A minimal Civo Python Pulumi program
